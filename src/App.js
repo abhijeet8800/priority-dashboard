@@ -5,7 +5,7 @@ import TopNav from './components/TopNav/TopNav';
 import DashView from './components/DashBoard/DashView';
 import { useDispatch, useSelector} from 'react-redux'
 import { fetchAllData } from './Actions/DataAction';
-import Loading from './components/Loading/Loading';
+
 
 const App = () => {
   const dispatch = useDispatch();
@@ -15,13 +15,13 @@ const App = () => {
     dispatch(fetchAllData());
   }, [dispatch])
 
-  return allTickets ? (
+  return (
     <div style={{paddingTop : "10px"}} >
       <TopNav/>
       <hr style={{marginTop : "10px"}} />
       <DashView/>
     </div>
-  ) : <Loading/>
+  )
 }
 
 export default App
