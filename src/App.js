@@ -9,7 +9,6 @@ import { fetchAllData } from './Actions/DataAction';
 
 const App = () => {
   const dispatch = useDispatch();
-  const {allTickets} = useSelector(state => state.DataReducer);
    
   useEffect(() => {
     dispatch(fetchAllData());
