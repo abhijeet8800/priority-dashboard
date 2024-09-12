@@ -54,7 +54,7 @@ export const selectData = (group, allTickets, orderValue) => async (dispatch) =>
                 })
             })
         }else{
-            let prior_list = ["No priority", "Low", "Medium", "High", "Urgent"];
+            let prior_list = ["No priority", "High", "Low", "Medium", "Urgent"];
 
             prior_list.forEach((elem, index) => {
                 arr = allTickets.filter((fElem) => {
